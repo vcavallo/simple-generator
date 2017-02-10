@@ -1,0 +1,88 @@
+/*$visual-grid: true;*/
+
+@import "bourbon/bourbon";
+@import "base/base";
+@import "neat/neat";
+
+.container {
+  @include outer-container;
+}
+
+header {
+  @include margin($base-spacing * 3 null null);
+  .header-container {
+    @include fill-parent;
+    h1 {
+      text-align: center;
+    }
+    .underline {
+      border-bottom: 1px solid currentColor;
+      display: inline-block;
+      line-height: 0.85;
+      text-shadow:
+        2px 2px white,
+        2px -2px white,
+        -2px 2px white,
+        -2px -2px white;
+    }
+    u {
+      text-decoration: none;
+      border-bottom: 1px solid black;
+    }
+    .contact {
+      display: block;
+      line-height: $base-line-height / 2;
+    }
+    .left {
+      @include span-columns(6 of 12);
+    }
+    .right {
+      @include span-columns(6 of 12);
+      text-align: right;
+    }
+  }
+
+}
+
+nav {
+  @include fill-parent;
+}
+
+.gallery {
+  @include fill-parent;
+  @include margin($small-spacing * 4 null null);
+}
+
+.iframe {
+  text-align: center;
+}
+
+.model {
+  text-align: center;
+  @include span-columns(12 of 12);
+  @include media($large-screen) {
+    @include span-columns(4 of 12);
+    @include omega(3n);
+  }
+  @include margin($base-spacing null);
+
+  .link {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  h3.name {
+    text-align: center;
+    font-size: modular-scale(3);
+    color: $base-font-color;
+  }
+
+  .info {
+    @include margin($small-spacing null null);
+  }
+
+  ul {
+    @include margin(-$base-spacing null null);
+  }
+}

@@ -1,0 +1,10 @@
+---
+- name: Thing 1
+  items:
+    - Some detail
+    - List thing
+- name: Thing 2
+  items:
+    - Extra Extra
+    - Read all about it
+- name: Thing 3

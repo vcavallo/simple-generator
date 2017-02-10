@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example Title</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+
+  <% @objects.each do |o| %>
+    <h3><%= o['name'] %></h3>
+    <% if !o['items'].nil? %>
+      <ul>
+        <% o['items'].each do |item| %>
+          <li><%= item %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  <% end %>
+
+</body>
+</html>
